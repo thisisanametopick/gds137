@@ -3,7 +3,7 @@
 var canvas;
 var context;
 var timer;
-var interval = 1000/60;
+var mainTimer = setInterval(animate, 1000/60); 
 var Ball;
 
 	canvas = document.getElementById("canvas");
