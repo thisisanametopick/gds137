@@ -12,7 +12,7 @@ var Ball;
 	
 	//------Declare the Ball speed on the x and y axis------
 	Ball.vx = 2;
-	Ball.vy = 0;
+	Ball.vy = 5;
 	//----------------------------------------------------
 	
 	timer = setInterval(animate, interval);
@@ -24,10 +24,11 @@ function animate()
 	Ball.move();
 	
 	//--------------Loop the Screen----------------------
-	if(Ball.x > canvas.width + Ball.width/2)
+	if(Ball.x > canvas.width - Ball.width/2)
 	{
-		Ball.x = -Ball.width/2	
+		Ball.x = -Ball.width/2
 	}
+	
 	//---------------------------------------------------
 	
 	Ball.draw();

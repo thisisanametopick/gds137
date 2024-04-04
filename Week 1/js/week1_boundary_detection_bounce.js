@@ -10,13 +10,16 @@ var Ball;
 	context = canvas.getContext("2d");	
 	Ball = new Ball();
 	
+	
 	//------Declare the Ball's speed on the x and y axis------
 	Ball.vx = 2;
-	Ball.vy = 0;
+	Ball.vy = 5;
+	
+	
 	//----------------------------------------------------
 	
 	timer = setInterval(animate, interval);
-
+	
 
 function animate()
 {
@@ -24,13 +27,17 @@ function animate()
 	
 	//----Movement Using the Ball's move() function----
 	Ball.move();
+	
 	//---------------------------------------------------
 	
 	//--------------Bounce of Right----------------------
 	if(Ball.x > canvas.width - Ball.width/2)
+	
 	{
 		Ball.vx = -Ball.vx;	
-	}
+	} 
+	
+
 	//---------------------------------------------------
 	
 	Ball.draw();

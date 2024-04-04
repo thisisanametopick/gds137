@@ -14,7 +14,7 @@ function Ball()
 	this.vy = 0;
 	
 	//Ball color
-	this.color = "#ff000";
+	this.color = "#00FF00";
 	
 	//This draws the Ball to the screen
 	this.draw = function()
@@ -27,6 +27,7 @@ function Ball()
 			closePath();
 		context.restore();
 		
+		
 	}	
 	
 	//This changes the Ball's position
@@ -34,5 +35,6 @@ function Ball()
 	{
 		this.x += this.vx;
 		this.y += this.vy;
+		
 	}
 }

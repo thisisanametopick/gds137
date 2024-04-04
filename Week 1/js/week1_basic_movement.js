@@ -7,10 +7,12 @@ var timer;
 var interval = 1000/60;
 var Ball;
 
+
 	//Set Up the Canvas
 	canvas = document.getElementById("canvas");
-	context = canvas.getContext("2d");	
+	context = canvas.getContext("2d");
 	
+
 	//Instantiate the Ball
 	Ball = new Ball();
 	
@@ -25,6 +27,8 @@ function animate()
 	//Move the Ball
 	Ball.x += 4;
 	
+	
 	//Update the Screen
 	Ball.draw();
+	
 }
