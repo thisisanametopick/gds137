@@ -8,11 +8,11 @@ var Ball;
 
 	canvas = document.getElementById("canvas");
 	context = canvas.getContext("2d");	
-	Ball = new Ball();
+	ball = new Ball();
 	
 	//------Declare the Ball speed on the x and y axis------
-	Ball.vx = 2;
-	Ball.vy = 5;
+	ball.vx = 2;
+	ball.vy = 5;
 	//----------------------------------------------------
 	
 	timer = setInterval(animate, interval);
@@ -21,15 +21,15 @@ var Ball;
 function animate()
 {
 	context.clearRect(0,0,canvas.width, canvas.height);	
-	Ball.move();
+	ball.move();
 	
 	//--------------Loop the Screen----------------------
-	if(Ball.x > canvas.width - Ball.width/2)
+	if(ball.x > canvas.width - ball.width/2)
 	{
-		Ball.x = -Ball.width/2
+		ball.x = canvas.width - ball.width/2
 	}
 	
 	//---------------------------------------------------
 	
-	Ball.draw();
+	ball.draw();
 }
