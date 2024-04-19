@@ -5,6 +5,8 @@ function Ball()
 	this.x = canvas.width/2;
 	this.y = canvas.height/2;
 	
+	this.width = 100;
+	this.height = 100;
 	//Ball dimensions
 	this.radius = 50;
 	
@@ -22,7 +24,7 @@ function Ball()
 		context.save();
 			context.fillStyle = this.color;
 			context.beginPath();
-			context.arc(this.x, this.y, this.radius, 0,360*Math.PI/180,true);
+			context.arc(this.x, this.y, this.width/2, 0,360*Math.PI/180,true);
 			context.fill();
 			closePath();
 		context.restore();
