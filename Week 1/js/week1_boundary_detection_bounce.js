@@ -4,16 +4,16 @@ var canvas;
 var context;
 var timer;
 var interval = 1000/60;
-var Ball;
+var ball;
 
 	canvas = document.getElementById("canvas");
 	context = canvas.getContext("2d");	
-	Ball = new Ball();
+	ball = new ball();
 	
 	
 	//------Declare the Ball's speed on the x and y axis------
-	Ball.vx = 2;
-	Ball.vy = 5;
+	ball.vx = 2;
+	ball.vy = 5;
 	
 	
 	//----------------------------------------------------
@@ -26,20 +26,22 @@ function animate()
 	context.clearRect(0,0,canvas.width, canvas.height);	
 	
 	//----Movement Using the Ball's move() function----
-	Ball.move();
+	ball.move();
 	
 	//---------------------------------------------------
 	
 	//--------------Bounce of Right----------------------
-	if(Ball.x > canvas.width - Ball.width/2)
+	if(ball.x > canvas.width - ball.width/2)
 	
 	{
-		Ball.vx = -Ball.vx;	
+		ball.vx = -ball.vx;	
 	} 
+
+	
 	
 
 	//---------------------------------------------------
 
 
-	Ball.draw();
+	ball.draw();
 }

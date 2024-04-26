@@ -27,6 +27,7 @@ function animate()
 	if(ball.x > canvas.width - ball.width/2)
 	{
 		ball.x = canvas.width - ball.width/2
+		ball.vx = - ball.vx
 	}
 
 	if(ball.y > canvas.height - ball.height/2)
@@ -38,7 +39,13 @@ function animate()
 	if(ball.x < 0 +ball.width/2)
 	{
 		ball.x = 0+ ball.width/2
-		ball.vx = -ball.vx
+		ball.vx = - ball.vx
+	}
+
+	if(ball.y < 0 +ball.height/2)
+	{
+		ball.y = 0+ ball.height/2
+		ball.vy = - ball.vy
 	}
 
 	
