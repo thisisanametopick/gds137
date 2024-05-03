@@ -1,6 +1,5 @@
 // JavaScript Document
 function GameObject(x,y,w,h,color)
-
 {
 	
 	//Default Values
@@ -21,21 +20,19 @@ function GameObject(x,y,w,h,color)
 		this.height = 110;
 	else 
 		this.height = h;
+
+		
 	
 		//player's color
 	if(color == undefined)
-		this.color = " #ED760E";
+		this.color = "#ff0000";
 	else 
 		this.color = color;
 	
 	//player's velocity or speed on each axis
-	this.vx = 0;
-	this.vy = 0;
+	this.vx = 5;
+	this.vy = 5;
 	
-	this.force = 1;
-
-	this.px = 1;
-	this.py = 1;
 
 	
 	//This draws the player to the screen
@@ -49,7 +46,19 @@ function GameObject(x,y,w,h,color)
 		
 	}	
 	
+	this.drawCircle = function()
+	{
+		context.save();
+			context.fillStyle = this.color;
+			context.beginPath();
+			context.translate(this.x, this.y);
+			context.arc(0, 0, this.width/2, 0, 360 *Math.PI/180, true);
+			context.arc(0, 0, this.width/2, 0, 360 *Math.PI/180, true);
+			context.closePath();
+			context.fill();
+		context.restore();
 		
+	}	
 	
 	//This changes the player's position
 	this.move = function()
@@ -89,3 +98,5 @@ function GameObject(x,y,w,h,color)
 	}
 	
 }
+
+
