@@ -7,6 +7,7 @@ var timer;
 var interval = 1000/60;
 var player;
 
+
 //This is used to stop the player from moving through obstacles.
 var prevX;
 
@@ -17,7 +18,7 @@ var prevX;
 	//Instantiate the Player
 	player = new GameObject();
 	player.x = 100;
-	
+
 	//lBlock1 = new GameObject(canvas.width - 750, canvas.height/2+75, 100, 100,"#00ff00");
 	//lBlock2 = new GameObject(canvas.width - 550, canvas.height/2+75, 100, 100,"#00ff00");
 	//rBlock1 = new GameObject((canvas.width-350), canvas.height/2, 100, 100, "orange");
@@ -67,6 +68,9 @@ function animate()
 		context.strokeRect(player.x- player.width/2, player.y - player.height/2, player.width, player.height)
 		
 	}
+
+
+	
 	
 	//Demonstrates how often collisions take place
 	if(rBlock1.hitTestObject(player))
@@ -75,6 +79,7 @@ function animate()
 
 		
 	}
+
 	
 	//Impede movement
 	if(rBlock2.hitTestObject(player))
@@ -85,6 +90,7 @@ function animate()
 	else
 	{
 		prevX = player.x;
+		
 	}
 
 	

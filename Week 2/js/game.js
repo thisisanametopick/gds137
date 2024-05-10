@@ -4,7 +4,8 @@ var timer;
 //1000 ms or 1 second / FPS
 var interval = 1000/60;
 var player;
-var ball
+var ball;
+var prevX;
 
 
 
@@ -45,6 +46,8 @@ function animate()
 	{
 		player.y = canvas.height - player.height/2
 		player.vy = -player.vy
+
+		
 	}
 
 	
@@ -68,12 +71,13 @@ function animate()
 		ball.y = canvas.height - ball.height/2
 		ball.vy = -ball.vy
 	}
-
-	/*if(ball.x < 0 +ball.width/2)
+	
+	//ball restart 
+	if(ball.x < 0 -ball.width/2)
 	{
-		ball.x = 0+ ball.width/2
-		ball.vx = - ball.vx
-	}*/
+		ball.x = 500+ ball.width/2
+		ball.vx = + ball.vx
+	}
 
 	if(ball.y < 0 +ball.height/2)
 	{
@@ -82,13 +86,55 @@ function animate()
 	}
 
 	
-	
-	
+	if(ball.hitTestObject(player))
+		{
+			ball.x = 5+ ball.width/2
+		    ball.vx = - ball.vx
+			
+			player.x = prevX;
+			console.log("colliding");
+		}
+		else
+		{
+			prevX = player.x;
+			
+
+		}
+		
+	if(ball.hitTestObject(player))
+		{
+			if(ball.y < player.y - player.height/6)
+				{
+					ball.vx = 5;
+					ball.vy = -5;
+				}
+
+				if(ball.y > player.y + player.height/6)
+					{
+						ball.vx = 5;
+						ball.vy = 5;
+					}
+
+		}
 
 	
 	ball.drawCircle();
 	
 	player.drawRect();
+	
+	
+	
+	
+		
+	
+	
+		
+	
+		
+	
+		
+	
+	
 }
 
 

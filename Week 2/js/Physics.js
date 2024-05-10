@@ -37,9 +37,8 @@ function main()
 	{
 		player.y = canvas.height
 	}
-
-
 	
+
 	
 
 	player.vy += gravity
