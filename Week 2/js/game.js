@@ -100,7 +100,7 @@ function animate()
 			
 
 		}
-		
+		// ball move with paddle eges
 	if(ball.hitTestObject(player))
 		{
 			if(ball.y < player.y - player.height/6)
