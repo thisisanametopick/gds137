@@ -45,7 +45,9 @@ function main()
 	
 	player.vx *= fx;
 	player.vy *= fy;
+
 	
 	player.move();
 	player.drawRect();
+	
 }

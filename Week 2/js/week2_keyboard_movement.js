@@ -37,9 +37,12 @@ function animate()
 		//console.log("Moving down");
 		player.y += 5;
 	}
+
+	
 	
 	//Update the Screen
 	player.drawRect();
+	
 
 	
 }

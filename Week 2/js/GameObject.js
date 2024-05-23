@@ -26,6 +26,7 @@ function GameObject(x,y,w,h,color)
 		//player's color
 	if(color == undefined)
 		this.color = "#ff0000";
+
 	else 
 		this.color = color;
 	
@@ -77,7 +78,6 @@ function GameObject(x,y,w,h,color)
 	{
 		return this.x + this.width/2;
 	}
-	
 	this.top = function() 
 	{
 		return this.y - this.height/2;
